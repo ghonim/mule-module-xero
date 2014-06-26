@@ -1,14 +1,22 @@
 package au.com.sixtree.mule.modules.xero;
 
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
+import java.util.UUID;
 
 import org.scribe.builder.ServiceBuilder;
 import org.scribe.model.OAuthRequest;
 import org.scribe.model.Response;
 import org.scribe.model.Token;
 import org.scribe.model.Verb;
+import org.scribe.model.Verifier;
 import org.scribe.oauth.OAuthService;
 import org.scribe.exceptions.OAuthException;
 
@@ -128,7 +136,7 @@ public class XeroConnectorClient {
 	{
 		Map<String,String> bodyParameters = new HashMap<String,String>();
 		bodyParameters.put("xml", payload);
-		return callXero(Verb.POST, buildRequestUri(objectType.toString()), null, bodyParameters, null);
+		return callXero(Verb.POST, buildRequestUri(stringObjectType), null, bodyParameters, null);
 	}
 	
 	
@@ -146,7 +154,7 @@ public class XeroConnectorClient {
 	{
 		Map<String,String> bodyParameters = new HashMap<String,String>();
 		bodyParameters.put("xml", payload);
-		return callXero(Verb.POST, buildRequestUri(objectType.toString()), null, null, payload);
+		return callXero(Verb.POST, buildRequestUri(stringObjectType), null, null, payload.getBytes("UTF-8"));
 	}
 	
 	/**
@@ -162,8 +170,7 @@ public class XeroConnectorClient {
 		return fullApiUri;
 	}
 
-	public String callXero(Verb verb, String url, Map<String,String> queryStringParameters, Map<String,String> bodyParameters, String payload)
-			throws XeroConnectorClientException, XeroConnectorClientUnexpectedException
+	public String callXero(Verb verb, String url, Map<String,String> queryStringParameters, Map<String,String> bodyParameters, byte[] payload)
 	{
 		String responseString = null;
 		
@@ -175,14 +182,14 @@ public class XeroConnectorClient {
 			.build();
 
 			OAuthRequest request = new OAuthRequest(verb, url);
-			for (Entry<String,String> entry : queryStringParameters.entrySet()) {
+			for (Entry<String,String> entry : queryStringParameters) {
 				request.addQuerystringParameter(entry.getKey(), entry.getValue());
 			}
-			for (Entry<String,String> entry : bodyParameters.entrySet()) {
+			for (Entry<String,String> entry : bodyParameters) {
 				request.addBodyParameter(entry.getKey(), entry.getValue());
 			}
 			if (payload != null) {
-				request.addPayload(payload.getBytes("UTF-8"));
+				request.addPayload(payload);
 			}
 			service.signRequest(this.accessToken, request);
 

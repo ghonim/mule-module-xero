@@ -175,7 +175,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, 
 					whereClause, orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -209,7 +209,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -243,7 +243,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObjectList(objectType);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -278,7 +278,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -313,7 +313,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -348,7 +348,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -383,7 +383,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -418,7 +418,7 @@ public class XeroConnector {
 			 response = xeroClient.getXeroObjectList(objectType, whereClause, 
 					 orderBy);
 		 } catch (XeroConnectorClientException e) {
-			 return e.getMessage();
+			 return e.getXeroException();
 		 } catch (XeroConnectorClientUnexpectedException e) {
 			 throw new RuntimeException(e);
 		 }
@@ -453,7 +453,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -488,7 +488,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -523,7 +523,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -558,7 +558,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -594,7 +594,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -629,7 +629,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -666,7 +666,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -701,7 +701,7 @@ public class XeroConnector {
 			response = xeroClient.getXeroObjectList(objectType, whereClause,
 					orderBy);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -731,7 +731,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, accountId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -761,7 +761,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, bankTransactionId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -791,7 +791,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, brandingThemeId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -821,7 +821,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, contactId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -851,7 +851,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, creditNoteId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -881,7 +881,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, employeeId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -911,7 +911,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, expenseClaimId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -941,7 +941,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, invoiceId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -968,7 +968,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, itemId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -997,7 +997,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, journalId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -1027,7 +1027,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, manualJournalId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -1054,7 +1054,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -1084,7 +1084,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, paymentId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -1114,7 +1114,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, receiptId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -1143,7 +1143,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -1173,7 +1173,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, trackingCategoryId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -1202,7 +1202,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.getXeroObject(objectType, userId);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -1234,7 +1234,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.createXeroObject(objectType, payload);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
@@ -1267,7 +1267,7 @@ public class XeroConnector {
 		try {
 			response = xeroClient.updateXeroObject(objectType, payload);
 		} catch (XeroConnectorClientException e) {
-			return e.getMessage();
+			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
 		}
